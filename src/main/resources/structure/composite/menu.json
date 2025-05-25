@@ -1,0 +1,175 @@
+[
+  {
+    "name": "관리자 설정",
+    "requiredRole": "ROLE_ADMIN_CONFIG",
+    "type": "MENU_GROUP",
+    "children": [
+      {
+        "name": "사용자 관리",
+        "requiredRole": "ROLE_USER_MANAGE",
+        "type": "MENU_GROUP",
+        "children": [
+          {
+            "name": "사용자 목록",
+            "requiredRole": "ROLE_USER_LIST",
+            "type": "MENU_ITEM",
+            "buttons": [
+              { "name": "조회",  "requiredRole": "ROLE_USER_VIEW" },
+              { "name": "수정",  "requiredRole": "ROLE_USER_EDIT" },
+              { "name": "삭제",  "requiredRole": "ROLE_USER_DELETE" }
+            ]
+          },
+          {
+            "name": "사용자 등록",
+            "requiredRole": "ROLE_USER_REGISTER",
+            "type": "MENU_ITEM",
+            "buttons": [
+              { "name": "등록", "requiredRole": "ROLE_USER_CREATE" },
+              { "name": "초기화", "requiredRole": "ROLE_USER_RESET" }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "권한 관리",
+        "requiredRole": "ROLE_AUTH_MANAGE",
+        "type": "MENU_GROUP",
+        "children": [
+          {
+            "name": "권한 목록",
+            "requiredRole": "ROLE_AUTH_LIST",
+            "type": "MENU_ITEM",
+            "buttons": [
+              { "name": "조회", "requiredRole": "ROLE_AUTH_VIEW" },
+              { "name": "수정", "requiredRole": "ROLE_AUTH_EDIT" }
+            ]
+          },
+          {
+            "name": "권한 할당",
+            "requiredRole": "ROLE_AUTH_ASSIGN",
+            "type": "MENU_ITEM",
+            "buttons": [
+              { "name": "할당", "requiredRole": "ROLE_AUTH_ASSIGN" },
+              { "name": "해제",  "requiredRole": "ROLE_AUTH_REVOKE" }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "통계 분석",
+    "requiredRole": "ROLE_STATISTICS",
+    "type": "MENU_GROUP",
+    "children": [
+      {
+        "name": "접속 통계",
+        "requiredRole": "ROLE_ACCESS_STAT",
+        "type": "MENU_GROUP",
+        "children": [
+          {
+            "name": "일별 통계",
+            "requiredRole": "ROLE_DAILY_ACCESS_STAT",
+            "type": "MENU_ITEM",
+            "buttons": [
+              { "name": "조회",  "requiredRole": "ROLE_DAILY_VIEW" },
+              { "name": "엑셀 다운로드", "requiredRole": "ROLE_DAILY_EXPORT" }
+            ]
+          },
+          {
+            "name": "월별 통계",
+            "requiredRole": "ROLE_MONTHLY_ACCESS_STAT",
+            "type": "MENU_ITEM",
+            "buttons": [
+              { "name": "조회",  "requiredRole": "ROLE_MONTHLY_VIEW" },
+              { "name": "차트 보기", "requiredRole": "ROLE_MONTHLY_CHART" }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "사용량 분석",
+        "requiredRole": "ROLE_USAGE_ANALYSIS",
+        "type": "MENU_GROUP",
+        "children": [
+          {
+            "name": "기능별 사용량",
+            "requiredRole": "ROLE_FEATURE_USAGE",
+            "type": "MENU_ITEM",
+            "buttons": [
+              { "name": "조회", "requiredRole": "ROLE_FEATURE_VIEW" },
+              { "name": "분석 리포트", "requiredRole": "ROLE_FEATURE_REPORT" }
+            ]
+          },
+          {
+            "name": "사용자별 분석",
+            "requiredRole": "ROLE_USER_USAGE_ANALYSIS",
+            "type": "MENU_ITEM",
+            "buttons": [
+              { "name": "조회",  "requiredRole": "ROLE_USER_USAGE_VIEW" },
+              { "name": "차트 보기", "requiredRole": "ROLE_USER_USAGE_CHART" }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "시스템 설정",
+    "requiredRole": "ROLE_SYSTEM_SETTINGS",
+    "type": "MENU_GROUP",
+    "children": [
+      {
+        "name": "환경 설정",
+        "requiredRole": "ROLE_ENV_CONFIG",
+        "type": "MENU_GROUP",
+        "children": [
+          {
+            "name": "시스템 설정",
+            "requiredRole": "ROLE_SYSTEM_CONFIG",
+            "type": "MENU_ITEM",
+            "buttons": [
+              { "name": "수정",  "requiredRole": "ROLE_SYSTEM_EDIT" },
+              { "name": "저장",  "requiredRole": "ROLE_SYSTEM_SAVE" }
+            ]
+          },
+          {
+            "name": "데이터베이스 설정",
+            "requiredRole": "ROLE_DB_CONFIG",
+            "type": "MENU_ITEM",
+            "buttons": [
+              { "name": "연결 테스트", "requiredRole": "ROLE_DB_TEST" },
+              { "name": "초기화", "requiredRole": "ROLE_DB_RESET" }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "로그 설정",
+        "requiredRole": "ROLE_LOG_CONFIG",
+        "type": "MENU_GROUP",
+        "children": [
+          {
+            "name": "로그 레벨 설정",
+            "requiredRole": "ROLE_LOG_LEVEL_CONFIG",
+            "type": "MENU_ITEM",
+            "buttons": [
+              { "name": "조회",  "requiredRole": "ROLE_LOG_LEVEL_VIEW" },
+              { "name": "저장", "requiredRole": "ROLE_LOG_LEVEL_SAVE" }
+            ]
+          },
+          {
+            "name": "로그 파일 관리",
+            "requiredRole": "ROLE_LOG_FILE_MANAGE",
+            "type": "MENU_ITEM",
+            "buttons": [
+              { "name": "조회",  "requiredRole": "ROLE_LOG_FILE_VIEW" },
+              { "name": "다운로드", "requiredRole": "ROLE_LOG_FILE_DOWNLOAD" },
+              { "name": "삭제",  "requiredRole": "ROLE_LOG_FILE_DELETE" }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
